@@ -1,0 +1,27 @@
+<launch>
+
+  <!-- Load your robot -->
+  <arg name="robot" default="piatek"/>
+  <arg name="gui" default="true" />
+  
+  <!--Robot descriprion -->
+  <param name="robot_description" textfile="$(find piatek_description)/urdf/piatek.urdf" />  
+
+  <!-- Joint_state_publisher -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+  <param name="use_gui" value="TRUE"/>
+  </node>
+
+  <!-- Robot_state_Publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <!-- Show in Rviz   -->
+  <!-- <arg name="rvizconfig" default="$(find piatek_description)/rviz/urdf.rviz" /> -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /> -->
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find piatek_description)/rviz/urdf.rviz" required="true" />
+  
+</launch>
+
+
+

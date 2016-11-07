@@ -1,17 +1,21 @@
 <?xml version="1.0"?>
 
 <package>
-  <name>piatek_launch</name>
+  <name>piatek_description</name>
   <version>0.0.0</version>
-  <description>The piatek_launch package</description>
+  <description>The piatek_description package</description>
 
   <maintainer email="sandraa_03@hotmail.es">Sandra</maintainer>
 
-
   <license>BSD</license>
 
+  <author email="sandraa_03@hotmail.es">Sandra</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <export>
+  </export>
 
 </package>
+
+
